@@ -1,0 +1,521 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+body {
+    background-color: #29272b;
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+    }
+}
+
+.pt-preloader {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 500;
+    align-items: center;
+    justify-content: center;
+    background: #bc89ff;
+    background: -moz-linear-gradient(left, #bc89ff 0%, #8b7fff 100%);
+    background: -webkit-linear-gradient(left, #bc89ff 0%, #8b7fff 100%);
+    background: linear-gradient( to right, #bc89ff 0%, #8b7fff 100%);
+}
+
+
+.pt-preloader .pt-logo img {
+    width: 78px;
+    height: 60px;
+}
+
+.pt-menu {
+    width: 100%;
+    height: 60px;
+    display: block;
+    position: fixed;
+    top: 20px;
+    left: 0;
+    z-index: 100;
+}
+
+.pt-menu ul {
+    height: 60px;
+    flex-direction: row;
+    text-align: center;
+    list-style: none;
+    margin: 0 auto;
+}
+
+.pt-menu ul li {
+    height: 60px;
+    display: inline-block;
+    position: relative;
+}
+
+.pt-menu ul li:hover:after, .pt-menu ul li.pt-active:after {
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: 3px;
+    border-radius: 2px;
+    background: #bc89ff;
+    background: -moz-linear-gradient(left, #bc89ff 0%, #8b7fff 100%);
+    background: -webkit-linear-gradient(left, #bc89ff 0%, #8b7fff 100%);
+    background: linear-gradient( to right, #bc89ff 0%, #8b7fff 100%);
+    bottom: -11px;
+    left: 10px;
+}
+
+.pt-menu ul li a {
+    height: 60px;
+    display: block;
+    padding: 0 25px;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 20px;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    line-height: 60px;
+    text-decoration: none;
+}
+
+.pt-menu ul li a:hover, .pt-menu ul li.pt-active a{
+    color: #fff;
+    font-weight: 800;
+}
+
+.pt-orbita {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    position: fixed;
+    left: -51%;
+    top: 0;
+    z-index: 1;
+    background-image: url(../images/elipse.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 100%;
+}
+
+.pt-saturno {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    position: fixed;
+    right: -35%;
+    top: 0;
+    z-index: 2;
+    background-image: url(../images/saturno.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 100%;
+}
+
+.pt-container {
+    width: 80%;
+    display: table;
+    margin: 150px auto;
+    position: relative;
+    z-index: 50;
+}
+
+.pt-section {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.pt-row-footer {
+    width: 10%;
+    position: absolute;
+    margin-top: -450px;
+    left: 50px;
+}
+
+.pt-section-start {
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+  
+}
+
+.pt-rowsection {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 200px;
+   
+}
+
+/* .pt-logotype {
+    margin-left: 0px;
+
+}
+
+.pt-symbol {
+    margin-right: 0px;
+
+}
+
+.pt-tagline {
+    margin-right: 0px;
+} */
+
+
+.pt-tagline p{
+    font-family: 'Source Code Pro', monospace;
+    font-size: 20px;
+    color: #fff;
+    height: 38px;
+    display: inline-block;
+    line-height: 38px;
+    background: #bc89ff;
+    background: -moz-linear-gradient(left, #bc89ff 0%, #8b7fff 100%);
+    background: -webkit-linear-gradient(left, #bc89ff 0%, #8b7fff 100%);
+    background: linear-gradient( to right, #bc89ff 0%, #8b7fff 100%);
+
+}
+
+
+.pt-btn-scroll {
+    width: 60px;
+    height: 60px;
+    display: block;
+    background-image: url("../images/arrow.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: fixed;
+    bottom: 60px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 100;
+}
+
+.pt-sidebar {
+    width: 60px;
+    height: 100vh;
+    background-color: #211f23;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    display: block;
+}
+
+.pt-sidebar > .pt-logo {
+    width: 32px;
+    height: 180px;
+    margin: 15px auto;
+    display: block;
+}
+
+.pt-project-nav {
+    width: 100px;
+    display: table;
+    position: fixed;
+    top: 40%;
+    right: 0;
+   z-index: 3;
+}
+
+.pt-project-nav ul {
+    list-style: none;
+    width: 100%;
+}
+
+.pt-project-nav ul li {
+    width: 100%;
+    height: 40px;
+    display: block;
+    position: relative;
+}
+
+.pt-project-nav ul li:hover:after, .pt-project-nav ul li.pt-active:after{
+    content: '';
+    width: 40px;
+    height: 3px;
+    border-radius: 2px;
+    background: #bc89ff;
+    background: -moz-linear-gradient(left, #bc89ff 0%, #8b7fff 100%);
+    background: -webkit-linear-gradient(left, #bc89ff 0%, #8b7fff 100%);
+    background: linear-gradient( to right, #bc89ff 0%, #8b7fff 100%);
+    position: absolute;
+    right: 0;
+    top: 18px;
+
+}
+
+
+.pt-project-nav ul li a{
+    height: 40px;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 20px;
+    color: rgb(173, 172, 172);
+    line-height: 40px;  
+    text-decoration: none;
+}
+
+.pt-project-nav ul li:hover a, .pt-project-nav ul li.pt-active a{
+    font-size: 36px;
+    color: #fff;
+}
+
+.pt-project-list {
+    width: 100%;
+    display: flex;
+   
+}
+
+.pt-project-list ul {
+    list-style: none;
+    width: 100%;
+    height: 100%;
+    display: table;
+}
+
+.pt-project-list > ul > li {
+    width: 100%;
+    display: table;
+    position: relative;
+}
+
+.pt-mockup {
+    width: 50%;
+    display: block;
+    position: absolute;
+    top: -30px;
+    right: -55px;
+}
+
+.pt-mockup img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+.pt-info {
+    width: 40%;
+    display: table;
+}
+
+.pt-info h1 {
+    color: #fff;
+    font-size: 36px;
+    font-family: 'Source Code Pro', monospace;
+}
+
+.pt-info p {
+    color: #c2c2c2;
+    font-size: 18px;
+    letter-spacing: 1.5px;
+    font-family: 'Source Code Pro', monospace;
+    margin-bottom: 40px;
+}
+
+.pt-banner img {
+    width: 100%;
+    height: 500px;
+    display: block;
+    border-radius: 3px;
+}
+
+.pt-actions {
+    margin-top: 30px;
+}
+
+.pt-actions ul {
+    list-style: none;
+    width: 50%;
+    display: block;
+    float: left;
+}
+
+
+.pt-actions ul li {
+    display: inline-block;
+    height: 40px;
+    padding: 0 5px;
+    position: relative;
+    color: rgb(134, 134, 134);
+    font-family: 'Source Code Pro', monospace;
+    text-transform: uppercase;
+    font-weight: 600;
+
+}
+
+.pt-actions ul li::before {
+    content: '/';
+    position: absolute;
+    right: -6px;
+    top: 0px;
+
+}
+
+.pt-actions ul li:last-child:before {
+    content: '';
+    position: absolute;
+    right: -6px;
+    top: 0px;
+
+}
+
+.pt-btn {
+    height: 55px;
+    display: block;
+    padding: 0 80px;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 14px;
+    letter-spacing: 2px;
+    line-height: 55px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    
+}
+
+.pt-btn-purple {
+    border: 1px solid #8a7fff;
+    border-radius: 6px;
+    color: #8a7fff;
+    
+}
+
+.pt-btn-purple:hover {
+    border: 1px solid #8a7fff;
+    border-radius: 6px;
+    background-color: #8a7fff;
+    color: #fff;
+    
+}
+
+
+.pt-actions > .pt-btn {
+    float: right;
+}
+
+/* Aqui pra cima ta de boa */
+
+.pt-logo-footer {
+
+}
+
+/* .pt-footer-wrapper {
+    width: 100%;
+    vertical-align: c;
+    display: flex;
+    background-color: red;
+} */
+
+
+.pt-footer-infor {
+    width: 100%;
+    padding-left: 60px;
+    margin-top: 80px;;
+}
+
+.pt-footer-infor > h2 {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 36px;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+.pt-footer-infor > p {
+    font-family: 'Source Code Pro', monospace;
+    font-size: px;
+    color: #fff;
+    margin-bottom: 30px;
+    letter-spacing: 1.5;
+}
+
+.pt-contact {
+    width: 100%;
+    padding-left: 80px;
+    display: block;
+}
+
+.pt-contact > h1, .pt-contact > p {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 16px;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: #8a7fff;
+}
+
+.pt-contact > h1 {
+    position: relative;
+}
+
+.pt-contact > h1:before {
+    content: '';
+    display: block;
+    width: 70px;
+    height: 3px;
+    border-radius: 2px;
+    position: absolute;
+    left: -80px;
+    top: 14px;
+    background: #bc89ff;
+    background: -moz-linear-gradient(left, #bc89ff 0%, #8b7fff 100%);
+    background: -webkit-linear-gradient(left, #bc89ff 0%, #8b7fff 100%);
+    background: linear-gradient( to right, #bc89ff 0%, #8b7fff 100%);
+}
+
+.pt-contact > p {
+    color: #fff;
+}
+
+.pt-contact ul {
+    list-style: none;
+    width: 100%;
+    display: table;
+    margin-top: 20px    ;
+}
+
+.pt-contact ul li {
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.pt-contact ul li a {
+    width: 24px;
+    height: 24px;
+    display: block;
+    border-radius: 3px;
+    text-align: center;
+    line-height: 24px;
+    color: #fff;
+    background: #bc89ff;
+    background: -moz-linear-gradient(left, #bc89ff 0%, #8b7fff 100%);
+    background: -webkit-linear-gradient(left, #bc89ff 0%, #8b7fff 100%);
+    background: linear-gradient( to right, #bc89ff 0%, #8b7fff 100%);
+}
+
+.pt-contact ul li a > ion-icon {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.pt-contact ul li a:hover {
+    background: #211f23;
+}
+
+.pt-fade-out {
+    animation: fadeOut 1s ease-out forwards;
+}
